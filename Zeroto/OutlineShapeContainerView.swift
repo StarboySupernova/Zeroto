@@ -1,5 +1,5 @@
 //
-//  ViewStyleModifier.swift
+//  OutlineShapeContainerView.swift
 //  Zeroto
 //
 //  Created by Simbarashe Dombodzvuku on 2/18/22.
@@ -12,6 +12,12 @@ struct ContainerView<Content:View, Outline:Shape>:View {
     
     var content:Content
     var outline: Outline
+    
+    enum Background {
+        case dark
+        case colorful
+    }
+    
     
     init (@ViewBuilder content: () -> Content, outlineShape: Outline) {
         self.content = content()

@@ -17,16 +17,18 @@ struct ContentView: View {
                 LinearGradient(Color("darkStart"), Color("darkEnd"))
                     .cornerRadius(geometry.size.width * 0.1, corners: [.topLeft, .bottomRight, .bottomLeft])
                 
+               /* Will implement settings button in another view
                 Button(action: {
                     print("Show Settings")
                 }, label: {
                     Image(systemName: "gearshape.fill")
                         .resizedToFill(width: geometry.size.width * 0.1,
-                                       height: geometry.size.width * 0.1)
+                                       height: geometry.size.height * 0.05)
                         .foregroundColor(.white)
                 })
                     .buttonStyle(DarkButtonStyle())
                     .offset(x: geometry.size.width * 0.35, y: -geometry.size.height * 0.4)
+                */
                 
                 VStack {
                     ContainerView(content: {
@@ -34,8 +36,8 @@ struct ContentView: View {
                             .resizedToFill(width: 50, height: 50)
                             .foregroundColor(.white)
                             .padding(10)
-                    }, outlineShape: RoundedRectangle(cornerRadius: 10))
-                        .offset(x: -geometry.size.width * 0.35, y: -geometry.size.height * 0.2)
+                    }, outlineShape: RoundedRectangle(cornerRadius: 20))
+                        .offset(x: 0, y: -geometry.size.height * 0.2)
                     //will need to implement functionality that reads environment values to ensure this view appears in the same position across multiple devices, namely the iPod touch
                     
                     Text("Zero To Infinity")
